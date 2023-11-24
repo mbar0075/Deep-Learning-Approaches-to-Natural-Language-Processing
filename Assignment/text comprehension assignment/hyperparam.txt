@@ -1,0 +1,461 @@
+=======================================================================================
+[0;32mIteration: 1[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 32, State Size: 32, Batch Size: 32, Dev Perplexity: 93.9[0m
+=======================================================================================
+[0;32mIteration: 2[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 32, State Size: 32, Batch Size: 64, Dev Perplexity: 97.4[0m
+=======================================================================================
+[0;32mIteration: 3[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 32, State Size: 32, Batch Size: 128, Dev Perplexity: 97.8[0m
+=======================================================================================
+[0;32mIteration: 4[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 32, State Size: 64, Batch Size: 32, Dev Perplexity: 85.5[0m
+=======================================================================================
+[0;32mIteration: 5[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 32, State Size: 64, Batch Size: 64, Dev Perplexity: 87.3[0m
+=======================================================================================
+[0;32mIteration: 6[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 32, State Size: 64, Batch Size: 128, Dev Perplexity: 88.0[0m
+=======================================================================================
+[0;32mIteration: 7[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 32, State Size: 128, Batch Size: 32, Dev Perplexity: 79.2[0m
+=======================================================================================
+[0;32mIteration: 8[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 32, State Size: 128, Batch Size: 64, Dev Perplexity: 79.8[0m
+=======================================================================================
+[0;32mIteration: 9[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 32, State Size: 128, Batch Size: 128, Dev Perplexity: 82.8[0m
+=======================================================================================
+[0;32mIteration: 10[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 32, State Size: 256, Batch Size: 32, Dev Perplexity: 76.4[0m
+=======================================================================================
+[0;32mIteration: 11[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 32, State Size: 256, Batch Size: 64, Dev Perplexity: 76.8[0m
+=======================================================================================
+[0;32mIteration: 12[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 32, State Size: 256, Batch Size: 128, Dev Perplexity: 78.5[0m
+=======================================================================================
+[0;32mIteration: 13[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 32, State Size: 312, Batch Size: 32, Dev Perplexity: 75.3[0m
+=======================================================================================
+[0;32mIteration: 14[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 32, State Size: 312, Batch Size: 64, Dev Perplexity: 75.9[0m
+=======================================================================================
+[0;32mIteration: 15[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 32, State Size: 312, Batch Size: 128, Dev Perplexity: 77.9[0m
+=======================================================================================
+[0;32mIteration: 16[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 64, State Size: 32, Batch Size: 32, Dev Perplexity: 94.1[0m
+=======================================================================================
+[0;32mIteration: 17[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 64, State Size: 32, Batch Size: 64, Dev Perplexity: 95.4[0m
+=======================================================================================
+[0;32mIteration: 18[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 64, State Size: 32, Batch Size: 128, Dev Perplexity: 96.6[0m
+=======================================================================================
+[0;32mIteration: 19[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 64, State Size: 64, Batch Size: 32, Dev Perplexity: 83.6[0m
+=======================================================================================
+[0;32mIteration: 20[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 64, State Size: 64, Batch Size: 64, Dev Perplexity: 85.9[0m
+=======================================================================================
+[0;32mIteration: 21[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 64, State Size: 64, Batch Size: 128, Dev Perplexity: 87.7[0m
+=======================================================================================
+[0;32mIteration: 22[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 64, State Size: 128, Batch Size: 32, Dev Perplexity: 77.2[0m
+=======================================================================================
+[0;32mIteration: 23[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 64, State Size: 128, Batch Size: 64, Dev Perplexity: 78.3[0m
+=======================================================================================
+[0;32mIteration: 24[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 64, State Size: 128, Batch Size: 128, Dev Perplexity: 80.7[0m
+=======================================================================================
+[0;32mIteration: 25[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 64, State Size: 256, Batch Size: 32, Dev Perplexity: 75.6[0m
+=======================================================================================
+[0;32mIteration: 26[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 64, State Size: 256, Batch Size: 64, Dev Perplexity: 76.2[0m
+=======================================================================================
+[0;32mIteration: 27[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 64, State Size: 256, Batch Size: 128, Dev Perplexity: 78.0[0m
+=======================================================================================
+[0;32mIteration: 28[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 64, State Size: 312, Batch Size: 32, Dev Perplexity: 74.4[0m
+=======================================================================================
+[0;32mIteration: 29[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 64, State Size: 312, Batch Size: 64, Dev Perplexity: 75.3[0m
+=======================================================================================
+[0;32mIteration: 30[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 64, State Size: 312, Batch Size: 128, Dev Perplexity: 77.7[0m
+=======================================================================================
+[0;32mIteration: 31[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 128, State Size: 32, Batch Size: 32, Dev Perplexity: 93.7[0m
+=======================================================================================
+[0;32mIteration: 32[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 128, State Size: 32, Batch Size: 64, Dev Perplexity: 93.1[0m
+=======================================================================================
+[0;32mIteration: 33[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 128, State Size: 32, Batch Size: 128, Dev Perplexity: 94.9[0m
+=======================================================================================
+[0;32mIteration: 34[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 128, State Size: 64, Batch Size: 32, Dev Perplexity: 83.2[0m
+=======================================================================================
+[0;32mIteration: 35[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 128, State Size: 64, Batch Size: 64, Dev Perplexity: 83.7[0m
+=======================================================================================
+[0;32mIteration: 36[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 128, State Size: 64, Batch Size: 128, Dev Perplexity: 84.6[0m
+=======================================================================================
+[0;32mIteration: 37[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 128, State Size: 128, Batch Size: 32, Dev Perplexity: 76.9[0m
+=======================================================================================
+[0;32mIteration: 38[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 128, State Size: 128, Batch Size: 64, Dev Perplexity: 78.3[0m
+=======================================================================================
+[0;32mIteration: 39[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 128, State Size: 128, Batch Size: 128, Dev Perplexity: 79.2[0m
+=======================================================================================
+[0;32mIteration: 40[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 128, State Size: 256, Batch Size: 32, Dev Perplexity: 74.8[0m
+=======================================================================================
+[0;32mIteration: 41[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 128, State Size: 256, Batch Size: 64, Dev Perplexity: 74.6[0m
+=======================================================================================
+[0;32mIteration: 42[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 128, State Size: 256, Batch Size: 128, Dev Perplexity: 76.7[0m
+=======================================================================================
+[0;32mIteration: 43[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 128, State Size: 312, Batch Size: 32, Dev Perplexity: 73.7[0m
+=======================================================================================
+[0;32mIteration: 44[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 128, State Size: 312, Batch Size: 64, Dev Perplexity: 75.1[0m
+=======================================================================================
+[0;32mIteration: 45[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 128, State Size: 312, Batch Size: 128, Dev Perplexity: 76.6[0m
+=======================================================================================
+[0;32mIteration: 46[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 256, State Size: 32, Batch Size: 32, Dev Perplexity: 93.2[0m
+=======================================================================================
+[0;32mIteration: 47[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 256, State Size: 32, Batch Size: 64, Dev Perplexity: 93.7[0m
+=======================================================================================
+[0;32mIteration: 48[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 256, State Size: 32, Batch Size: 128, Dev Perplexity: 93.9[0m
+=======================================================================================
+[0;32mIteration: 49[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 256, State Size: 64, Batch Size: 32, Dev Perplexity: 82.5[0m
+=======================================================================================
+[0;32mIteration: 50[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 256, State Size: 64, Batch Size: 64, Dev Perplexity: 81.8[0m
+=======================================================================================
+[0;32mIteration: 51[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 256, State Size: 64, Batch Size: 128, Dev Perplexity: 83.7[0m
+=======================================================================================
+[0;32mIteration: 52[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 256, State Size: 128, Batch Size: 32, Dev Perplexity: 77.2[0m
+=======================================================================================
+[0;32mIteration: 53[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 256, State Size: 128, Batch Size: 64, Dev Perplexity: 77.0[0m
+=======================================================================================
+[0;32mIteration: 54[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 256, State Size: 128, Batch Size: 128, Dev Perplexity: 77.8[0m
+=======================================================================================
+[0;32mIteration: 55[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 256, State Size: 256, Batch Size: 32, Dev Perplexity: 73.6[0m
+=======================================================================================
+[0;32mIteration: 56[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 256, State Size: 256, Batch Size: 64, Dev Perplexity: 74.6[0m
+=======================================================================================
+[0;32mIteration: 57[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 256, State Size: 256, Batch Size: 128, Dev Perplexity: 76.4[0m
+=======================================================================================
+[0;32mIteration: 58[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 256, State Size: 312, Batch Size: 32, Dev Perplexity: 73.9[0m
+=======================================================================================
+[0;32mIteration: 59[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 256, State Size: 312, Batch Size: 64, Dev Perplexity: 74.0[0m
+=======================================================================================
+[0;32mIteration: 60[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 256, State Size: 312, Batch Size: 128, Dev Perplexity: 76.5[0m
+=======================================================================================
+[0;32mIteration: 61[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 312, State Size: 32, Batch Size: 32, Dev Perplexity: 94.8[0m
+=======================================================================================
+[0;32mIteration: 62[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 312, State Size: 32, Batch Size: 64, Dev Perplexity: 93.6[0m
+=======================================================================================
+[0;32mIteration: 63[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 312, State Size: 32, Batch Size: 128, Dev Perplexity: 95.3[0m
+=======================================================================================
+[0;32mIteration: 64[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 312, State Size: 64, Batch Size: 32, Dev Perplexity: 83.1[0m
+=======================================================================================
+[0;32mIteration: 65[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 312, State Size: 64, Batch Size: 64, Dev Perplexity: 81.2[0m
+=======================================================================================
+[0;32mIteration: 66[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 312, State Size: 64, Batch Size: 128, Dev Perplexity: 84.0[0m
+=======================================================================================
+[0;32mIteration: 67[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 312, State Size: 128, Batch Size: 32, Dev Perplexity: 77.3[0m
+=======================================================================================
+[0;32mIteration: 68[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 312, State Size: 128, Batch Size: 64, Dev Perplexity: 75.9[0m
+=======================================================================================
+[0;32mIteration: 69[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 312, State Size: 128, Batch Size: 128, Dev Perplexity: 77.7[0m
+=======================================================================================
+[0;32mIteration: 70[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 312, State Size: 256, Batch Size: 32, Dev Perplexity: 73.4[0m
+=======================================================================================
+[0;32mIteration: 71[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 312, State Size: 256, Batch Size: 64, Dev Perplexity: 73.9[0m
+=======================================================================================
+[0;32mIteration: 72[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 312, State Size: 256, Batch Size: 128, Dev Perplexity: 76.2[0m
+=======================================================================================
+[0;32mIteration: 73[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 312, State Size: 312, Batch Size: 32, Dev Perplexity: 74.0[0m
+=======================================================================================
+[0;32mIteration: 74[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 312, State Size: 312, Batch Size: 64, Dev Perplexity: 73.2[0m
+=======================================================================================
+[0;32mIteration: 75[0m
+[0;35mLearning Rate: 0.01, Embedding Size: 312, State Size: 312, Batch Size: 128, Dev Perplexity: 75.4[0m
+=======================================================================================
+[0;32mIteration: 76[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 32, State Size: 32, Batch Size: 32, Dev Perplexity: 102.9[0m
+=======================================================================================
+[0;32mIteration: 77[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 32, State Size: 32, Batch Size: 64, Dev Perplexity: 103.2[0m
+=======================================================================================
+[0;32mIteration: 78[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 32, State Size: 32, Batch Size: 128, Dev Perplexity: 110.2[0m
+=======================================================================================
+[0;32mIteration: 79[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 32, State Size: 64, Batch Size: 32, Dev Perplexity: 90.8[0m
+=======================================================================================
+[0;32mIteration: 80[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 32, State Size: 64, Batch Size: 64, Dev Perplexity: 92.8[0m
+=======================================================================================
+[0;32mIteration: 81[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 32, State Size: 64, Batch Size: 128, Dev Perplexity: 95.3[0m
+=======================================================================================
+[0;32mIteration: 82[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 32, State Size: 128, Batch Size: 32, Dev Perplexity: 84.0[0m
+=======================================================================================
+[0;32mIteration: 83[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 32, State Size: 128, Batch Size: 64, Dev Perplexity: 83.9[0m
+=======================================================================================
+[0;32mIteration: 84[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 32, State Size: 128, Batch Size: 128, Dev Perplexity: 87.1[0m
+=======================================================================================
+[0;32mIteration: 85[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 32, State Size: 256, Batch Size: 32, Dev Perplexity: 81.4[0m
+=======================================================================================
+[0;32mIteration: 86[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 32, State Size: 256, Batch Size: 64, Dev Perplexity: 82.8[0m
+=======================================================================================
+[0;32mIteration: 87[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 32, State Size: 256, Batch Size: 128, Dev Perplexity: 83.8[0m
+=======================================================================================
+[0;32mIteration: 88[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 32, State Size: 312, Batch Size: 32, Dev Perplexity: 81.8[0m
+=======================================================================================
+[0;32mIteration: 89[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 32, State Size: 312, Batch Size: 64, Dev Perplexity: 83.4[0m
+=======================================================================================
+[0;32mIteration: 90[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 32, State Size: 312, Batch Size: 128, Dev Perplexity: 84.8[0m
+=======================================================================================
+[0;32mIteration: 91[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 64, State Size: 32, Batch Size: 32, Dev Perplexity: 100.5[0m
+=======================================================================================
+[0;32mIteration: 92[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 64, State Size: 32, Batch Size: 64, Dev Perplexity: 102.5[0m
+=======================================================================================
+[0;32mIteration: 93[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 64, State Size: 32, Batch Size: 128, Dev Perplexity: 106.2[0m
+=======================================================================================
+[0;32mIteration: 94[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 64, State Size: 64, Batch Size: 32, Dev Perplexity: 88.9[0m
+=======================================================================================
+[0;32mIteration: 95[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 64, State Size: 64, Batch Size: 64, Dev Perplexity: 92.1[0m
+=======================================================================================
+[0;32mIteration: 96[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 64, State Size: 64, Batch Size: 128, Dev Perplexity: 94.5[0m
+=======================================================================================
+[0;32mIteration: 97[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 64, State Size: 128, Batch Size: 32, Dev Perplexity: 82.4[0m
+=======================================================================================
+[0;32mIteration: 98[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 64, State Size: 128, Batch Size: 64, Dev Perplexity: 84.0[0m
+=======================================================================================
+[0;32mIteration: 99[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 64, State Size: 128, Batch Size: 128, Dev Perplexity: 86.6[0m
+=======================================================================================
+[0;32mIteration: 100[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 64, State Size: 256, Batch Size: 32, Dev Perplexity: 78.8[0m
+=======================================================================================
+[0;32mIteration: 101[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 64, State Size: 256, Batch Size: 64, Dev Perplexity: 80.2[0m
+=======================================================================================
+[0;32mIteration: 102[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 64, State Size: 256, Batch Size: 128, Dev Perplexity: 81.6[0m
+=======================================================================================
+[0;32mIteration: 103[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 64, State Size: 312, Batch Size: 32, Dev Perplexity: 79.8[0m
+=======================================================================================
+[0;32mIteration: 104[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 64, State Size: 312, Batch Size: 64, Dev Perplexity: 80.5[0m
+=======================================================================================
+[0;32mIteration: 105[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 64, State Size: 312, Batch Size: 128, Dev Perplexity: 81.5[0m
+=======================================================================================
+[0;32mIteration: 106[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 128, State Size: 32, Batch Size: 32, Dev Perplexity: 100.2[0m
+=======================================================================================
+[0;32mIteration: 107[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 128, State Size: 32, Batch Size: 64, Dev Perplexity: 103.9[0m
+=======================================================================================
+[0;32mIteration: 108[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 128, State Size: 32, Batch Size: 128, Dev Perplexity: 103.4[0m
+=======================================================================================
+[0;32mIteration: 109[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 128, State Size: 64, Batch Size: 32, Dev Perplexity: 87.8[0m
+=======================================================================================
+[0;32mIteration: 110[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 128, State Size: 64, Batch Size: 64, Dev Perplexity: 90.0[0m
+=======================================================================================
+[0;32mIteration: 111[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 128, State Size: 64, Batch Size: 128, Dev Perplexity: 90.7[0m
+=======================================================================================
+[0;32mIteration: 112[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 128, State Size: 128, Batch Size: 32, Dev Perplexity: 80.4[0m
+=======================================================================================
+[0;32mIteration: 113[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 128, State Size: 128, Batch Size: 64, Dev Perplexity: 83.4[0m
+=======================================================================================
+[0;32mIteration: 114[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 128, State Size: 128, Batch Size: 128, Dev Perplexity: 85.6[0m
+=======================================================================================
+[0;32mIteration: 115[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 128, State Size: 256, Batch Size: 32, Dev Perplexity: 78.0[0m
+=======================================================================================
+[0;32mIteration: 116[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 128, State Size: 256, Batch Size: 64, Dev Perplexity: 79.4[0m
+=======================================================================================
+[0;32mIteration: 117[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 128, State Size: 256, Batch Size: 128, Dev Perplexity: 80.5[0m
+=======================================================================================
+[0;32mIteration: 118[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 128, State Size: 312, Batch Size: 32, Dev Perplexity: 78.2[0m
+=======================================================================================
+[0;32mIteration: 119[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 128, State Size: 312, Batch Size: 64, Dev Perplexity: 79.0[0m
+=======================================================================================
+[0;32mIteration: 120[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 128, State Size: 312, Batch Size: 128, Dev Perplexity: 80.2[0m
+=======================================================================================
+[0;32mIteration: 121[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 256, State Size: 32, Batch Size: 32, Dev Perplexity: 101.4[0m
+=======================================================================================
+[0;32mIteration: 122[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 256, State Size: 32, Batch Size: 64, Dev Perplexity: 101.9[0m
+=======================================================================================
+[0;32mIteration: 123[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 256, State Size: 32, Batch Size: 128, Dev Perplexity: 106.9[0m
+=======================================================================================
+[0;32mIteration: 124[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 256, State Size: 64, Batch Size: 32, Dev Perplexity: 87.2[0m
+=======================================================================================
+[0;32mIteration: 125[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 256, State Size: 64, Batch Size: 64, Dev Perplexity: 90.6[0m
+=======================================================================================
+[0;32mIteration: 126[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 256, State Size: 64, Batch Size: 128, Dev Perplexity: 92.2[0m
+=======================================================================================
+[0;32mIteration: 127[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 256, State Size: 128, Batch Size: 32, Dev Perplexity: 80.2[0m
+=======================================================================================
+[0;32mIteration: 128[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 256, State Size: 128, Batch Size: 64, Dev Perplexity: 82.4[0m
+=======================================================================================
+[0;32mIteration: 129[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 256, State Size: 128, Batch Size: 128, Dev Perplexity: 84.1[0m
+=======================================================================================
+[0;32mIteration: 130[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 256, State Size: 256, Batch Size: 32, Dev Perplexity: 77.3[0m
+=======================================================================================
+[0;32mIteration: 131[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 256, State Size: 256, Batch Size: 64, Dev Perplexity: 78.1[0m
+=======================================================================================
+[0;32mIteration: 132[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 256, State Size: 256, Batch Size: 128, Dev Perplexity: 79.4[0m
+=======================================================================================
+[0;32mIteration: 133[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 256, State Size: 312, Batch Size: 32, Dev Perplexity: 76.8[0m
+=======================================================================================
+[0;32mIteration: 134[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 256, State Size: 312, Batch Size: 64, Dev Perplexity: 77.9[0m
+=======================================================================================
+[0;32mIteration: 135[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 256, State Size: 312, Batch Size: 128, Dev Perplexity: 79.4[0m
+=======================================================================================
+[0;32mIteration: 136[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 312, State Size: 32, Batch Size: 32, Dev Perplexity: 98.6[0m
+=======================================================================================
+[0;32mIteration: 137[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 312, State Size: 32, Batch Size: 64, Dev Perplexity: 100.3[0m
+=======================================================================================
+[0;32mIteration: 138[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 312, State Size: 32, Batch Size: 128, Dev Perplexity: 105.5[0m
+=======================================================================================
+[0;32mIteration: 139[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 312, State Size: 64, Batch Size: 32, Dev Perplexity: 87.5[0m
+=======================================================================================
+[0;32mIteration: 140[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 312, State Size: 64, Batch Size: 64, Dev Perplexity: 89.2[0m
+=======================================================================================
+[0;32mIteration: 141[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 312, State Size: 64, Batch Size: 128, Dev Perplexity: 91.1[0m
+=======================================================================================
+[0;32mIteration: 142[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 312, State Size: 128, Batch Size: 32, Dev Perplexity: 81.2[0m
+=======================================================================================
+[0;32mIteration: 143[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 312, State Size: 128, Batch Size: 64, Dev Perplexity: 82.8[0m
+=======================================================================================
+[0;32mIteration: 144[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 312, State Size: 128, Batch Size: 128, Dev Perplexity: 84.1[0m
+=======================================================================================
+[0;32mIteration: 145[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 312, State Size: 256, Batch Size: 32, Dev Perplexity: 77.4[0m
+=======================================================================================
+[0;32mIteration: 146[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 312, State Size: 256, Batch Size: 64, Dev Perplexity: 78.4[0m
+=======================================================================================
+[0;32mIteration: 147[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 312, State Size: 256, Batch Size: 128, Dev Perplexity: 79.5[0m
+=======================================================================================
+[0;32mIteration: 148[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 312, State Size: 312, Batch Size: 32, Dev Perplexity: 76.5[0m
+=======================================================================================
+[0;32mIteration: 149[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 312, State Size: 312, Batch Size: 64, Dev Perplexity: 77.9[0m
+=======================================================================================
+[0;32mIteration: 150[0m
+[0;35mLearning Rate: 0.001, Embedding Size: 312, State Size: 312, Batch Size: 128, Dev Perplexity: 79.4[0m
+=======================================================================================
+[0;32mIteration: 151[0m
+[0;35mLearning Rate: 0.0001, Embedding Size: 32, State Size: 32, Batch Size: 32, Dev Perplexity: 113.8[0m
+=======================================================================================
+[0;32mIteration: 152[0m
+[0;35mLearning Rate: 0.0001, Embedding Size: 32, State Size: 32, Batch Size: 64, Dev Perplexity: 116.6[0m
+=======================================================================================
+[0;32mIteration: 153[0m
+[0;35mLearning Rate: 0.0001, Embedding Size: 32, State Size: 32, Batch Size: 128, Dev Perplexity: 120.9[0m
+=======================================================================================
+[0;32mIteration: 154[0m
