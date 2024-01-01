@@ -1,2 +1,293 @@
 # Deep Learning Approaches to Natural Language Processing
- 
+
+## Text Compression with Neural Language Models
+
+The measurement of an AI's intelligence often hinges on its ability to compress text without losing information. This concept revolves around predictability—the more predictable a text is deemed by an AI, the more words it can omit and intelligently guess.
+
+This notion spurred the creation of the [Hutter Prize](http://prize.hutter1.net/), a competition focused on compressing text to its utmost limit. Contestants aim to compress a given text, such as a 1GB file extracted from a Wikipedia snapshot, with the current record achieving compression down to about 115MB.
+
+One of the challenges lies in the requirement that the decompression program must be included as part of the compressed file. This necessitates an efficient program, contributing to the overall challenge of reducing file size.
+
+This assignment mimics this concept on a smaller scale, utilizing neural language models to predict and guess missing words for text compression.
+
+<p align='center'><img src="Assignment\Diagrams\Compression.png" alt="Compression"/></p>
+
+
+## 1) Data Processing
+
+A **train/dev/test** split corpus of text from Wikipedia was provided, consisting of single sentences. Each sentence was on a separate line, and the tokens were already tokenised with space separation, ensuring that splitting by space yielded the tokens. Additionally, the text had already been lowercased.
+
+The main objective revolved around compressing the text losslessly, ensuring it could be decompressed back to the original string:
+
+$$\text{decompress}(\text{compress}(t)) = t$$
+
+No further pre-processing was allowed on the text (such as stemming) to prevent potential unrecoverable information loss. The test set, treated as a single large string, was what we aimed to compress without any further processing for use in compression/decompression algorithms.
+
+### 1.1) Loading Train and Dev Sets
+- **File Usage:**
+  - **train.txt:** Was used for training the model.
+  - **dev.txt:** Was utilized to validate the model.
+  - **test.txt:** Reserved for testing the model.
+- **Data Handling:**
+  - Loaded `train.txt` and `dev.txt` into separate lists, tokenising sentences by space separation.
+  - The test set wasn't loaded per the instructions.
+
+### 1.2) Vocabulary Extraction
+- **Vocabulary Criteria:**
+  - Extracted tokens occurring at least three times in the train set.
+  - Included edge token, unknown token, and pad token in the vocabulary.
+- **Results:**
+  - Vocabulary size: **7874**.
+  - The most frequent token in the train set was **'the'**.
+
+### 1.3) Processing Token Sequences
+- **Language Model Preparation:**
+  - Processed loaded token sequences for the train and dev sets using the created vocabulary.
+  - Incorporated edge tokens, unknown tokens, and pad tokens as suitable.
+  - This step wasn't performed for the test set.
+
+### 1.4) Loading Test Set
+- **Test Set Handling:**
+  - The test set text file was loaded as a single string and stored in a variable.
+  - This set wasn't subjected to further processing for language model suitability.
+
+## 2) Evaluation Tools
+
+This phase required the establishment of an evaluation function for language models and the creation of a mock model for testing purposes prior to the development of the actual language model.
+
+### Evaluation Function
+The language model function was expected to adhere to the following signature:
+- **Input Parameter:** `x_indexes`
+  - A tensor that provided the model's input token indexes for a batch of sentences, commencing with the edge token.
+  - Type: `int64`, Shape: `(batch size, time steps)`
+
+- **Returns:**
+  - A tensor of logits predicting the possible next token after each token in `x_indexes`.
+  - Type: `float32`, Shape: `(batch size, time steps, vocab size)`
+
+### Mock Model Creation
+- **Objective:** Creating a mock model designed to mimic a language model's behavior based on straightforward rules.
+- Usage: This mock model was utilized to assess the evaluation, compression, and decompression functions before the development of the actual language model.
+
+Utilizing this mock model enabled a thorough validation of the evaluation function's functionality before the actual language model was constructed.
+
+
+ ### 2.1) Developing a Mock Language Model
+
+A `MockModel` module was devised to predict the subsequent token based on the following rules:
+
+- If the actual previous token (not the predicted one) was 'the', the model predicted that the current token would be 'dog'.
+- Otherwise, the model predicted that the current token would be 'the'.
+
+This mock model operates by assigning logits to tokens, specifically giving the predicted token a logit of 2 and all other tokens a logit of 0. The class name associated with this model is `MockModel`.
+
+**Logits vs. Probabilities:**
+
+- **Logits**: These represent the raw predictions generated by a classification model before normalization.
+- **Probabilities**: This denotes the normalized output of a classification model after being processed by a softmax function.
+
+
+### 2.2) Perplexity Measurement Function
+
+A function was developed to gauge the perplexity of a language model on a dev set. This function took a model and a dataset of token indexes, returning the perplexity across the entire dataset.
+
+**Important Considerations:**
+- Perplexity computation involved incorporating the probability of the edge token at the end of each sentence.
+- Pad tokens were disregarded in the computation.
+
+**Evaluation of Mock Model:**
+- The function was utilized to determine the perplexity of the mock model on the dev set, resulting in a value equal to `7062.2`.
+
+
+## 3) Compression and Decompression
+
+This section introduced the implementation of the code responsible for the compression and decompression of text.
+
+### Compression Algorithm:
+
+The compression algorithm operated in the following steps:
+
+1. Began with a string of text, `text`, and a language model, `model`.
+2. Extracted a list of tokens from `text`, known as `tokens`, and a corresponding list of token indexes, known as `indexes`.
+3. Applied the `model` to `indexes` to generate `predicted`, a list of predicted next tokens based on the model.
+4. Replaced tokens in `tokens` with the letter 'X' if they corresponded to tokens in `predicted`, indicating predictability by the model. This 'X' denoted that a token should be predicted here, potentially shortening the text if 'X' was shorter than the replaced token.
+5. Tokens correctly predicted by the model were replaced with 'X', while unpredicted tokens remained unchanged.
+6. Returned the modified `tokens` as a space-separated string.
+
+### Decompression Algorithm:
+
+The decompression algorithm operated as follows:
+
+1. Utilized a string of compressed text named `text` and a language model `model`.
+2. Extracted a list of tokens from `text`, named `tokens`.
+3. Iterated through `tokens` from the start and halted at the first occurrence of 'X'.
+4. Converted all tokens preceding the 'X' to token indexes termed `indexes`.
+5. Utilized `model` to predict the most probable token at the end of `indexes`.
+6. Replaced 'X' in `tokens` with this predicted token.
+7. Repeated this process for every 'X' found.
+8. Once all 'X' had been replaced in `tokens`, returned the modified `tokens` as a space-separated string.
+
+### 3.1) Compression Function Implementation
+
+The compression function was designed to handle input text consisting of sentences separated by new lines and space-separated tokens. Its objective was to return a single string with each line in the input text being compressed. It was crucial to ensure that all out-of-vocabulary tokens remained unchanged in the output, explicitly preventing any unknown tokens in the result.
+
+#### Implementation Notes:
+
+- The function didn't need to strictly adhere to the previously described algorithm, allowing flexibility in variable names and operations.
+- Special attention was given to handling out-of-vocabulary tokens, replacing them with the unknown token when creating token indexes but ensuring they weren't present in the compressed output.
+- The prediction of the most probable token index for all token positions at once was facilitated using `.argmax(1)` based on the logits.
+- Comparisons between predictions and string tokens in the uncompressed sentence were utilized to avoid the unknown token from being considered a correct prediction.
+
+#### Example using the Mock Model:
+
+The compression of the sentence: 
+`the dog bit the cat sensually .`
+
+Resulted in the compressed form:
+`X X bit X cat sensually .`
+
+### 3.2) Decompression Function Implementation
+
+The decompression function was designed to handle input text comprising sentences separated by new lines and space-separated tokens, including 'X' tokens. Its purpose was to return a single big string where each line in the compressed text could be decompressed back into the original input line.
+
+#### Implementation Notes:
+
+- The function couldn't utilize the language model once to predict all 'X's at once due to the requirement that each sentence prefix leading up to the 'X' should not contain another 'X'. As a result, individual language model predictions had to be made for every 'X', using only the tokens preceding 'X' as input to the model (along with the edge token at the beginning).
+- Ensuring that the input to the language model excluded 'X's was essential, replacing these 'X's with their predicted tokens when constructing the language model input.
+
+#### Example Using the Compressed Text:
+
+The decompression of the compressed text:
+`X X bit X cat sensually .`
+
+Resulted in the decompressed form:
+`the dog bit the cat sensually .`
+
+### 3.3) Space Saving Calculation using the Mock Model
+
+The space-saving amount was calculated by leveraging the mock model on the test set, employing the following formula:
+
+$$\text{space\_saving}(t) = 1 - \frac{|\text{compress}(t)|}{|t|}$$
+
+where $|t|$ represents the number of characters in text $t$.
+
+#### Calculated Space Saving:
+
+Utilizing the mock model on the test set resulted in a space-saving amount of 2.4%.
+
+## 4) Training a Language Model
+
+### 4.1) Training a Neural Language Model
+
+The objective was to train a neural language model on the train set. Following the training process, a graph showcasing the variation of the *dev set perplexity* with each epoch was generated, employing the previously developed perplexity function.
+
+<p align='center'><img src="Assignment\Diagrams\Training.png" alt="Model"/></p>
+
+### Neural Language Model Architecture
+
+The `NeuralLanguageModel` was a neural architecture designed for language modeling and text compression, structured with various layers:
+
+#### Layers:
+
+1. **Embedding Layer**
+   - Converted token indexes into embeddings.
+   - Input Shape: Vocabulary size, Output Shape: Embedding size.
+
+2. **LSTM Cell**
+   - Processed embeddings using an LSTM layer.
+   - Input Shape: Embedding size, Output Shape: State size.
+
+3. **Dropout Layer**
+   - Applied dropout to intermediate states.
+   - Dropout Rate: 0.5.
+
+4. **Batch Normalization**
+   - Normalized the LSTM output across batches.
+   
+5. **Output Layer**
+   - Produced logits predicting the next token.
+   - Input Shape: State size, Output Shape: Vocabulary size.
+
+#### Parameters:
+
+- **Vocabulary Size**: Determined the size of the vocabulary.
+- **Embedding Size**: Defined the size of the embedding layer.
+- **State Size**: Set the size of the LSTM layer.
+- **Dropout Rate**: Dropout applied to intermediate states (default: 0.5).
+- **Weight Decay**: Weight decay factor (default: 1e-5).
+
+This architecture allowed the model to predict subsequent tokens in a sequence, aiding in text compression and language modeling tasks.
+
+### 4.1.1) Hyperparameter Tuning
+
+Hyperparameter optimization was conducted to pinpoint the most effective configuration. Following extensive testing, it was determined that the most favorable hyperparameters were:
+
+- `Learning Rate: 0.01`
+- `Embedding Size: 312`
+- `State Size: 312`
+- `Batch Size: 64`
+
+Furthermore, this specific combination of hyperparameters yielded a dev perplexity of `73.2`. These hyperparameters were selected based on their ability to minimize perplexity during language model training.
+
+
+### Training and Evaluation Graphs
+
+The section previously showcased the training and evaluation graphs, displaying the model's performance across epochs. These graphs provided insights into the training progress, dev set perplexity variations, and other performance metrics, aiding in understanding the model's learning behavior and validation performance.
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="Assignment\Diagrams\training_curve.png" alt="training"  width="100%" />
+    </td>
+    <td align="center">
+      <img src="Assignment\Diagrams\perplexity_curve.png" alt="perplexity"
+       width="100%"/>
+    </td>
+  </tr>
+</table>
+
+<center>
+<p align='center'>
+
+**The perplexity of the dev set on the language model is: `73.3`**
+
+</p>
+</center>
+
+### 4.2) Space Saving Measurement and Decompression Validation
+
+The trained model's space saving efficiency on the test text was quantified, ensuring that upon decompressing the compressed test text, an exact match was obtained with the original test text. Special attention was given to stripping off the newline character from the end of the test text for accurate comparison.
+
+### 4.3) Analysis of Model's Output
+
+The test text was segmented into sentences, and each individual sentence underwent compression. The top 5 most compressed and top 5 least compressed sentences, based on the space saving metric, were printed alongside their respective compressed versions.
+
+### 4.4) Analysis of Sentence Compressibility
+
+A thorough investigation was conducted to discern whether a sentence's compressibility correlated with its similarity to the train set. This involved extracting trigrams from the train set using `nltk.trigrams` and calculating a domain similarity measure for each test sentence by counting overlapping trigrams with the train set. The resultant list mapping each sentence's domain similarity to its space saving amount was then used to plot a scatter plot. The analysis aimed to identify any correlation between the domain similarity measure and the space saving amount, which could be evident through a trend or pattern in the scatter plot.
+
+<p align='center'><img src="Assignment\Diagrams\domain_similarity.png" alt="Domain Similarity"/></p>
+
+### 4.5) Analysis of Scatter Plot
+
+Upon examination, the scatter plot didn't exhibit a linear trend and predominantly skewed towards very low space saving amounts, irrespective of domain similarity. This observation led to the realization that **domain similarity alone is insufficient to explain compressibility**. Several other factors contribute to a sentence's compressibility, not solely contingent on its similarity to the train set.
+
+#### Answer:
+
+**Domain similarity**, while an important factor, fails to wholly elucidate compressibility. Other unaccounted factors influencing compressibility include sentence length, linguistic complexity, language structure, recurring word patterns, dataset size used for training, and the employed compression algorithm. Additionally, the model's predictive capability based on prior tokens in a sentence, beyond trigram-based domain similarity, can significantly influence compression outcomes, contributing to the observed discrepancy in the scatter plot.
+
+## 5) Conclusions
+
+### 5.1) Simple Enhancement in the Compression Algorithm
+
+A simple improvement in the compression algorithm involved encoding common phrases as single tokens or codes, effectively reducing the vocabulary size while maintaining predictive capabilities. For instance, phrases like "the dog" could be replaced with a single representative token, allowing compressible phrases to be represented more efficiently, resulting in enhanced compression.
+
+### 5.2) Analysis and Potential Model Enhancements
+
+The outcomes from the Neural Language Model indicated an incremental improvement in space saving, achieving a range between `3.5%` to `3.8%` compared to the `2.4%` attained by the mock model. Despite this marginal enhancement, the model's dev perplexity, ranging from `73.2` to `73.8`, showed substantial improvement over the mock model's perplexity of `7062.2`. Several factors contributed to this, including regularization techniques like dropout and weight decay to mitigate overfitting, gradient clipping to prevent exploding gradients, and hyperparameter tuning.
+
+The model demonstrated a steady decrease in training error and perplexity without signs of overfitting, suggesting its ability to learn intrinsic patterns in English sentences. However, the depth of understanding within the language remains uncertain without further analysis of the model's predictions.
+
+To enhance the model's performance further, potential improvements include employing more advanced architectures like transformer models, training on a diverse dataset to capture additional language intricacies, adjusting token omission thresholds for increased compression, and potentially integrating a semantic similarity metric to ensure retained meaning in compressed text.
+
+Overall, the neural model showcased promising performance enhancements in compression efficiency and linguistic comprehension, yet there's room for advancement through architectural refinements and broader data exposure.
