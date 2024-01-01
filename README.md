@@ -167,7 +167,7 @@ Resulted in the decompressed form:
 
 The space-saving amount was calculated by leveraging the mock model on the test set, employing the following formula:
 
-$$\text{space\_saving}(t) = 1 - \frac{|\text{compress}(t)|}{|t|}$$
+$$\text{spaceSaving}(t) = 1 - \frac{|\text{compress}(t)|}{|t|}$$
 
 where $|t|$ represents the number of characters in text $t$.
 
