@@ -2,18 +2,24 @@
 
 ## Text Compression with Neural Language Models
 
+<p align="justify">
+
 The measurement of an AI's intelligence often hinges on its ability to compress text without losing information. This concept revolves around predictability—the more predictable a text is deemed by an AI, the more words it can omit and intelligently guess.
 
 This notion spurred the creation of the [Hutter Prize](http://prize.hutter1.net/), a competition focused on compressing text to its utmost limit. Contestants aim to compress a given text, such as a 1GB file extracted from a Wikipedia snapshot, with the current record achieving compression down to about 115MB.
 
 One of the challenges lies in the requirement that the decompression program must be included as part of the compressed file. This necessitates an efficient program, contributing to the overall challenge of reducing file size.
 
-This assignment mimics this concept on a smaller scale, utilizing neural language models to predict and guess missing words for text compression.
+This project mimics this concept on a smaller scale, utilizing neural language models to predict and guess missing words for text compression.
+
+</p>
 
 <p align='center'><img src="Assignment\Diagrams\Compression.png" alt="Compression"/></p>
 
 
 ## 1) Data Processing
+
+<p align="justify">
 
 A **train/dev/test** split corpus of text from Wikipedia was provided, consisting of single sentences. Each sentence was on a separate line, and the tokens were already tokenised with space separation, ensuring that splitting by space yielded the tokens. Additionally, the text had already been lowercased.
 
@@ -51,7 +57,11 @@ No further pre-processing was allowed on the text (such as stemming) to prevent 
   - The test set text file was loaded as a single string and stored in a variable.
   - This set wasn't subjected to further processing for language model suitability.
 
+</p>
+
 ## 2) Evaluation Tools
+
+<p align="justify">
 
 This phase required the establishment of an evaluation function for language models and the creation of a mock model for testing purposes prior to the development of the actual language model.
 
@@ -98,8 +108,11 @@ A function was developed to gauge the perplexity of a language model on a dev se
 **Evaluation of Mock Model:**
 - The function was utilized to determine the perplexity of the mock model on the dev set, resulting in a value equal to `7062.2`.
 
+</p>
 
 ## 3) Compression and Decompression
+
+<p align="justify">
 
 This section introduced the implementation of the code responsible for the compression and decompression of text.
 
@@ -173,9 +186,13 @@ where $|t|$ represents the number of characters in text $t$.
 
 #### Calculated Space Saving:
 
-Utilizing the mock model on the test set resulted in a space-saving amount of 2.4%.
+Utilizing the mock model on the test set resulted in a space-saving amount of `2.4%`.
+
+</p>
 
 ## 4) Training a Language Model
+
+<p align="justify">
 
 ### 4.1) Training a Neural Language Model
 
@@ -276,7 +293,11 @@ Upon examination, the scatter plot didn't exhibit a linear trend and predominant
 
 **Domain similarity**, while an important factor, fails to wholly elucidate compressibility. Other unaccounted factors influencing compressibility include sentence length, linguistic complexity, language structure, recurring word patterns, dataset size used for training, and the employed compression algorithm. Additionally, the model's predictive capability based on prior tokens in a sentence, beyond trigram-based domain similarity, can significantly influence compression outcomes, contributing to the observed discrepancy in the scatter plot.
 
+</p>
+
 ## 5) Conclusions
+
+<p align="justify">
 
 ### 5.1) Simple Enhancement in the Compression Algorithm
 
@@ -291,3 +312,5 @@ The model demonstrated a steady decrease in training error and perplexity withou
 To enhance the model's performance further, potential improvements include employing more advanced architectures like transformer models, training on a diverse dataset to capture additional language intricacies, adjusting token omission thresholds for increased compression, and potentially integrating a semantic similarity metric to ensure retained meaning in compressed text.
 
 Overall, the neural model showcased promising performance enhancements in compression efficiency and linguistic comprehension, yet there's room for advancement through architectural refinements and broader data exposure.
+
+</p>
